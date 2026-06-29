@@ -1,17 +1,30 @@
 body {
   margin: 0;
-  background: #061726;
   color: white;
   font-family: Arial, sans-serif;
   overflow: hidden;
 }
 
+/* 🌊 FOND VIDÉO */
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.45) contrast(1.2);
+}
+
+/* 📺 CONTENEUR PRINCIPAL */
 #app {
   width: 100vw;
   height: 100vh;
   position: relative;
 }
 
+/* 🎬 SLIDES */
 .slide {
   position: absolute;
   width: 100%;
@@ -23,24 +36,40 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  /* 🔥 améliore lisibilité sur vidéo */
+  background: rgba(0, 0, 0, 0.15);
+  padding: 40px;
+  box-sizing: border-box;
 }
 
 .slide.active {
   opacity: 1;
 }
 
+/* 🧠 TITRES */
 h1 {
-  font-size: 52px;
+  font-size: 58px;
   margin-bottom: 30px;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.6);
 }
 
-/* LOGOS GRID */
+/* 🧾 TEXTE MESSAGE */
+#message-slide p {
+  font-size: 28px;
+  max-width: 900px;
+  opacity: 0.95;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+/* 🏢 LOGOS GRID */
 .logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 60px;
   width: 80%;
   align-items: center;
+  justify-items: center;
 }
 
 .logos img {
@@ -52,6 +81,7 @@ h1 {
   animation: fadeIn 0.8s forwards;
 }
 
+/* ✨ ANIMATION LOGOS */
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -59,15 +89,9 @@ h1 {
   }
 }
 
-/* MESSAGE */
-#message-slide p {
-  font-size: 28px;
-  max-width: 900px;
-  opacity: 0.9;
-}
-
-/* CONTACT */
+/* 📞 CONTACT */
 .contact p {
   font-size: 28px;
   margin: 10px;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
