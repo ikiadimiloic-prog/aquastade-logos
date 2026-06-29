@@ -95,3 +95,6 @@ h1 {
   margin: 10px;
   text-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
+.slide {
+  background: rgba(0,0,0,0.2);
+}
