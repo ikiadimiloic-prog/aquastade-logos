@@ -1,10 +1,10 @@
 [
-  "Carrefour",
-  "IKEA",
-  "Renault",
-  "Safran",
-  "Arianespace",
-  "Tennis Mennecy",
-  "Centre Hospitalier Sud Francilien (CHSF)",
-  "X-FAB"
+  { "nom": "Carrefour", "icone": "fa-solid fa-cart-shopping" },
+  { "nom": "IKEA", "icone": "fa-solid fa-couch" },
+  { "nom": "Renault", "icone": "fa-solid fa-car" },
+  { "nom": "Safran", "icone": "fa-solid fa-plane-up" },
+  { "nom": "Arianespace", "icone": "fa-solid fa-rocket" },
+  { "nom": "Tennis Mennecy", "icone": "fa-solid fa-table-tennis-paddle-ball" },
+  { "nom": "CHSF", "icone": "fa-solid fa-hospital" },
+  { "nom": "X-FAB", "icone": "fa-solid fa-microchip" }
 ]
