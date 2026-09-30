@@ -60,7 +60,7 @@ h1 {
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* 🏢 GRILLE DE PARTENAIRES (TEXTE) */
+/* 🏢 GRILLE DE PARTENAIRES */
 .logos {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -70,25 +70,39 @@ h1 {
   justify-items: center;
 }
 
-/* 🏷️ BADGES DES NOMS D'ENTREPRISES */
+/* 🏷️ BADGES DES PARTENAIRES */
 .partner-badge {
   width: 100%;
   box-sizing: border-box;
-  padding: 22px 15px;
+  padding: 24px 15px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(8px);
   border-radius: 12px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
   color: #ffffff;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-  
+
+  /* Disposition icône au-dessus du texte */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+
   /* Animation d'apparition */
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s forwards;
+}
+
+/* 🎨 STYLE DES ICÔNES FONT AWESOME */
+.partner-badge i {
+  font-size: 40px;
+  color: #4fc3f7; /* Bleu aquatique */
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
 }
 
 /* ✨ ANIMATION DES BADGES */
