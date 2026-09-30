@@ -7,19 +7,22 @@ function showSlide(index) {
   slides[index].classList.add("active");
 }
 
-// Charger les logos
+// Charger les noms des partenaires depuis le JSON
 fetch("logos.json")
   .then(res => res.json())
-  .then(logos => {
+  .then(partenaires => {
     const container = document.getElementById("logos");
+    container.innerHTML = ""; // Vide le conteneur avant d'ajouter les éléments
 
-    logos.forEach((src, i) => {
-      const img = document.createElement("img");
-      img.src = src;
-      img.style.animationDelay = (i * 0.1) + "s";
-      container.appendChild(img);
+    partenaires.forEach((nom, i) => {
+      const badge = document.createElement("div");
+      badge.classList.add("partner-badge");
+      badge.textContent = nom;
+      badge.style.animationDelay = (i * 0.1) + "s";
+      container.appendChild(badge);
     });
-  });
+  })
+  .catch(err => console.error("Erreur de chargement du JSON :", err));
 
 // Rotation des slides
 function nextSlide() {
